@@ -1,0 +1,30 @@
+<? xml version = " 1.0 " encoding = " UTF-8 " ?>
+< manifesto >
+
+    <! - Device ->
+    < ResurrectionRemix = " Harpia-development / device_motorola_harpia "  path = " device / motorola / harpia "  remote = " github "  revision = " lineage-17.1 " />
+    < ResurrectionRemix = " Harpia-development / device_motorola_msm8916-common "  path = " device / motorola / msm8916-common "  remote = " github "  revision = " lineage-17.1 " />
+    < ResurrectionRemix  = " Harpia-development / kernel_motorola_msm8916 " path = " kernel / motorola / msm8916 " remote = " github " revision = " lineage-17.1 " />   
+    < ResurrectionRemix  = " Harpia-development / vendor_motorola " path = " vendor / motorola " remote = " github " revision = " q " />   
+
+
+    <!-- GNU GCC 9.0 kernel toolchain -->
+    < project  name = " Harpia-development / android_prebuilts_gcc_linux-x86_arm_arm-linux-gnueabi-9.0 "  path = " prebuilts / gcc / linux-x86 / arm / arm-linux-gnueabi-9.0 "  remote = " github "  revision = " master " />
+
+    <! - Boringssl ->
+    < project  name = " LineageOS / android_external_bson "  path = " external / bson "  remote = " github "  revision = " lineage-15.1 " />
+
+    <! - SELinux ->
+    < project  name = " Harpia-development / android_device_qcom_sepolicy-legacy "  path = " device / qcom / sepolicy-legacy "  remote = " github "  revision = " magma_ten " />
+
+    <!-- Fixes broken implementation for "policy_hal" -->
+    < remove-project  name = " vendor_qcom_opensource_audio " />
+    < project  name = " LineageOS / android_vendor_qcom_opensource_audio "  path = " vendor / qcom / opensource / audio "  remote = " github "  revision = " lineage-17.0 " />
+
+    <!-- Fixes duplicated SoftAP repo. -->
+    < remove-project  name = " LineageOS / android_system_qcom " />
+
+    <!-- Import LineageOS' music player: "Eleven" -->
+    < project  name = " LineageOS / android_packages_apps_Eleven "  path = " packages / apps / Eleven "  remote = " github "  revision = " lineage-17.0 " />
+
+</ manifest >
